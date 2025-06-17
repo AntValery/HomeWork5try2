@@ -16,15 +16,19 @@
 1230 -> 0321
 """
 
-tmp = ''
-def revers(n):
-    global tmp
-    if n == 0:
-        print(int(tmp))
+
+def revers(n, tmp = ''):
+    if len(str(n)) == 1:
+        tmp += str(n)
+        print(tmp)
     else:
         tmp += str(n % 10)
         n //= 10
-        revers(n)
+        #print(n)
+        revers(n, tmp)
 
 a = int(input())
 revers(a)
+
+
+
