@@ -11,11 +11,11 @@ A = 3; B = 5 -> 243 (3⁵)
 def exponentiation(a, b):
     if b == 0:
         return 1
+    elif b < 0:
+       return 1 / a * exponentiation(a, b + 1)
     else:
         return a * exponentiation(a, b - 1)
-#    elif b < 0:
-#       return exponentiation(a * 2, b + 1)
 #    elif b == 0:
 #       return 1
-print(exponentiation(3, 5))
-print(3**5)
+print(exponentiation(2, 1))
+print(2**1)
